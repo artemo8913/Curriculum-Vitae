@@ -41,7 +41,7 @@
         font-size: 12px;
     }
 }
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 390px) {
     .container{
         font-size: 11px;
     }
@@ -156,36 +156,33 @@ h1{
 }
 @media screen and (max-width: 1045px) {
     .test-puteks{
-        width: 98%;
-    }
-}
-@media screen and (max-width: 1045px) {
-    .test-puteks{
         width: 70%;
     }
-    .xo{
-        width: 98%; 
-    }
+
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 770px) {
     .asu-tp img{
-        width: 90%;
+        width: 70%;
     }
     .test-puteks img{
         width: 40%;
     }
-    .xo img{
-        width: 90%;
-    }
     .digital-ech img{
-        width: 90%;
+        width: 70%;
     }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 550px) {
+    .asu-tp img{
+        width: 95%;
+    }
+    .test-puteks img{
+        width: 40%;
+    }
     .digital-ech img{
-        width: 60%;
+        width: 95%;
     }
 }
+
 /* ======================== About & contacts ============================ */
 .sertifications{
     width: 50%;
@@ -202,8 +199,8 @@ h1{
 .about ul{
     margin-bottom: 20px;
 }
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 1045px) {
     .sertifications{
-        width: 100%;
+        width: 70%;
     }
 }
