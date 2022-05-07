@@ -10,10 +10,34 @@
 </head>
 
 <body>
+    <div class="mouse"></div>
+    <aside class="aside-menu aside-menu_closed">
+        <div class="aside-menu__btn-open btn">
+            <div class="btn__inner">
+                <img src="./source/moreIcon.svg" alt="">
+            </div>
+        </div>
+        <nav class="aside-menu__navigation nav-menu">
+            <div class="aside-menu__btn-close btn">
+                <div class="btn__inner">
+                    <img src="./source/closeIcon.svg" alt="">
+                </div>
+            </div>
+            <div class="nav-menu__title">МЕНЮ</div>
+            <ul class="nav-menu__list">
+                <li class="nav-menu__list-item"><a linkTo="asu-tp">АСУ ТП КрИЖТ</a></li>
+                <li class="nav-menu__list-item"><a linkTo="test-puteks">Тест по проверке знаний</a></li>
+                <li class="nav-menu__list-item"><a linkTo="xo">X-O</a></li>
+                <li class="nav-menu__list-item"><a linkTo="digital-ech">Цифровая дистанция электроснабжения</a></li>
+                <li class="nav-menu__list-item"><a linkTo="sertifications">Сертификаты</a></li>
+                <li class="nav-menu__list-item"><a linkTo="about">Контакты</a></li>
+            </ul>
+        </nav>
+    </aside>
     <div class="container">
         <section class="title">
-            <div class="title-bg"></div>
-            <h1 class="title__h1"><em>Spiryaev's Work Place</em></h1>
+            <div class="title__bg"></div>
+            <h1 class="title__h1">SPIRYAEV'S <span class="title__h1_subtext">WORK PLACE</span></h1>
         </section>
         <section class="asu-tp">
             <h2>Интерактивная однолинейная схема учебной тяговой подстанции КрИЖТ</h2>
@@ -27,7 +51,7 @@
                 обеспечивается запрет операций с этой аппаратурой. При переключениях осуществляется проверка возможности
                 операции, и, если оператор совершил неверное действие, происходит звуковое оповещение о недопустимости
                 выполнения операции. Все действия оператора фиксируются и заносятся в журнал событий.</p>
-            
+
             <nav>Ссылка на .exe файл и исходные файлы проекта: <a href="https://yadi.sk/d/NZHFxEOKPM1sPQ">Я.диск</a>
             </nav>
         </section>
@@ -35,17 +59,19 @@
             <h2>Тест по проверке знаний электромонтера контактной сети</h2>
             <img src="./source/Тест.gif" alt="Тест" srcset="">
             <p>Простой тест для проверки знаний электромонтера контактной сети разработн на Unity3D для android
-                смартфонов. Данное тестирование использовалось при проведении конкурсов "Лучший электромонтер контактной
-                сети". В результате тестирования предоставляется статистика верности ответов по категориям (охрана
-                труда, устройства контактной сети и т.д.)
+                смартфонов.</p>
+            <p>Данное тестирование использовалось при проведении конкурсов "Лучший электромонтер контактной
+            сети". В результате тестирования предоставляется статистика верности ответов по категориям (охрана
+            труда, устройства контактной сети и т.д.)
             </p>
-            
+
             <nav>Ссылки на .apk проекта: <a href="https://yadi.sk/d/u_SAnd_BJhBHrA">Я.диск</a>
             </nav>
         </section>
         <section class="xo">
             <h2>Крестики-нолики</h2>
-            <p>Самая обыкновенная игра, при разработке которой впервые познакомился с JavaScript, структрой DOM-дерева.</p>
+            <p>Самая обыкновенная игра, при разработке которой впервые познакомился с JavaScript, структрой DOM-дерева.
+            </p>
             <img src="./source/xo.gif" alt="Крестики-нолики" srcset="">
             <nav>Ссылки на сайт и исходные файлы проекта: <a href="https://artemo8913.github.io/-tic-tac-toe/">Github
                     pages</a> <a href="https://github.com/artemo8913/-tic-tac-toe">GitHub</a></nav>
@@ -71,7 +97,7 @@
                 цвета в зависимости от даты проведения ТР и периодичности проведения ТР. Нажатием на участок контактной
                 сети появляется информационная панель с данными о ТР. Обнаруженные в процессе обработки ошибки
                 прописываются в новом файле excel, который можно скачать и в нем провести корректировку.</p>
-            
+
             <nav>Ссылки на сайт и исходные файлы проекта: <a href="https://artemo8913.github.io/ech3/">Github pages</a>
                 <a href="https://github.com/artemo8913/ech3">GitHub</a> <a
                     href="https://disk.yandex.ru/i/cfqHGlupPZU4KA">Скачать excel файл с данными</a>
@@ -96,10 +122,14 @@
             <ul>Мои характеристики:
                 <li><a href="mailto:kaline-son@ya.ru">Электронная почта</a></li>
                 <li><a href="https://vk.com/feed">ВКонтакте</a></li>
-                <li><a href="https://krasnoyarsk.hh.ru/resume/46a41a52ff0915ac450039ed1f554534716842">Резюме hh.ru</a></li>
+                <li><a href="https://krasnoyarsk.hh.ru/resume/46a41a52ff0915ac450039ed1f554534716842">Резюме hh.ru</a>
+                </li>
             </ul>
         </section>
     </div>
+    <script src="./scripts/asidecontrol.js"></script>
+    <script src="./scripts/mouse.js"></script>
+    <script src="./scripts/btnMagnit.js"></script>
     <script src="./scripts/paralax.js"></script>
     <script src="./scripts/smoothBehavior.js"></script>
     <script src="./scripts/app.js"></script>
