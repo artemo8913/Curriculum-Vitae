@@ -20,7 +20,7 @@ setWhiteMouseColor(titleBg);
 // Array.from(paragraphsOther).forEach(item => setParallax(container, item, 110, 6));
 // Array.from(imgs).forEach(item => setParallax(container, item, 100, 5));
 Array.from(links).forEach(link => setLinkHover(link));
-Array.from(btns).forEach(btn => magnetBtn(btn));
+Array.from(btns).forEach(btn => magnetBtn(btn, mouse));
 
 setShowAside(aside, asideBtnOpen);
 setHideAside(aside, asideBtnClose, asideBtnOpen);

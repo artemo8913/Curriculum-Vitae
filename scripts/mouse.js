@@ -10,8 +10,8 @@ window.addEventListener('mousemove', event => {
         mousePos.y = magnet.circlePos.y + magnet.btnInnerOffset.y / 2;
     }
     else {
-        mousePos.x = event.pageX - mouse.getBoundingClientRect().width / 2;
-        mousePos.y = event.pageY - mouse.getBoundingClientRect().width / 2;
+        mousePos.x = event.pageX;
+        mousePos.y = event.pageY;
     }
     mouse.style.transform = `translate(${mousePos.x + 'px'},${mousePos.y + 'px'})`;
 });
