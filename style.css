@@ -37,7 +37,6 @@ body{
     background-color: white;
 }
 .mouse_link-hover{
-    display: flex;
     background-color: rgba(255, 255, 255, 0.503);
     width: 20px;
     height: 20px;
@@ -70,13 +69,20 @@ body{
     width: 100%;
     height: 100%;
 }
+@media screen and (max-width: 770px) {
+    .btn{
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+    }
+}
 /* ======================== Main container ============================ */
 .container {
     margin-left: 50px;
     font-size: 20px;
     display: flex;
     overflow: auto;
-    gap: 60px;
+    gap: 100px;
     width: 100vw;
     height: 100vh;
     scrollbar-width: none;
@@ -97,17 +103,23 @@ body{
 @media screen and (max-width: 770px) {
     .container{
         margin-left: 0px;
-        font-size: 14px;
+        padding-bottom: 30px;
+        font-size: 13px;
     }
 }
 @media screen and (max-width: 550px) {
     .container{
+        font-size: 11px;
+    }
+}
+@media screen and (max-height: 414.98px) {
+    .container{
         font-size: 12px;
     }
 }
-@media screen and (max-width: 392px) {
+@media screen and (max-height: 375.98px) {
     .container{
-        font-size: 11px;
+        font-size: 10px;
     }
 }
 /*==================== Aside-menu====================*/
@@ -155,17 +167,24 @@ body{
     transform: translate(10px,0);
 }
 @media screen and (max-width: 770px) {
+    .aside-menu{
+        width: 100%;
+        font-size: 1.2em;
+    }
     .aside-menu_closed{
         left: 0px;
-        transform: translate(-101%,0px);
+        top: calc(100% - 30px);
     }
     .aside-menu__btn-open{
-        position: absolute;
-        background-color: ghostwhite;
-        transform: translate(0px,0px);
         top: 0px;
-        left: 102%;
-        border: 1px solid #ccc;
+        left: 50%;
+        transform: translate(-50%,0px) rotate(90deg);
+    }
+    .aside-menu__btn-close{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%,-100%);
     }
 }
 /* ======================== Section ============================ */
@@ -176,14 +195,10 @@ section{
     width: 95%;
     height: 100%;
     padding: 30px 15px;
-    /* border: 3px black solid; */
-    /* transition: all linear; */
-    /* transition-duration: 0.3s; */
-    /* scroll-snap-align: center; */
+    border: 1px solid black;
 }
 section h2{
     font-size: 1.6em;
-    /* font-style: italic; */
     margin-bottom: 30px;
 }
 section p{
@@ -191,19 +206,31 @@ section p{
 }
 section img{
     float: right;
-    margin: 10px 10px 10px 10px;
+    margin: 10px;
+    width: auto;
+    height: auto;
 }
 section nav{
-    position: absolute;
-    right: 0px;
-    bottom: 30px;
-    font-size: 0.8em;
-    line-height: 10px;
+    margin-top: 10px;
 }
 section nav a{
     margin-right: 10px;
 }
 @media screen and (max-width: 770px) {
+    section{
+        padding: 10px 10px;
+    }
+    section nav{
+        bottom: 10px;
+    }
+    section h2{
+        margin-bottom: 10px;
+    }
+    section p{
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-height: 700px) {
     section{
         padding: 10px 10px;
     }
@@ -261,13 +288,16 @@ section nav a{
 }
 /* ======================== My projects ============================ */
 .asu-tp img{
-    width: 50%;
+    max-width: 70%;
+    max-height: 40%;
 }
 .test-puteks{
     width: 50%;
 }
 .test-puteks img{
-    width: 30%;
+    max-width: 40%;
+    max-height: 60%;
+    
 }
 .xo{
     width: 50%; 
@@ -276,10 +306,12 @@ section nav a{
     float: none;
     display: block;
     margin: auto;
-    width: 80%;
+    max-width: 80%;
+    max-height: 40%;
 }
 .digital-ech img{
-    width: 40%;
+    max-width: 50%;
+    max-height: 50%;
 }
 @media screen and (max-width: 1045px) {
     .test-puteks{
@@ -292,27 +324,27 @@ section nav a{
 }
 @media screen and (max-width: 770px) {
     .asu-tp img{
-        width: 70%;
+        max-width: 70%;
     }
     .test-puteks img{
-        width: 40%;
+        max-width: 40%;
     }
     .digital-ech img{
-        width: 70%;
+        
     }
 }
 @media screen and (max-width: 550px) {
     .asu-tp img{
-        width: 80%;
+        max-width: 80%;
     }
     .test-puteks img{
-        width: 60%;
+        max-width: 60%;
     }
     .xo img{
-        width: 100%;
+        max-width: 100%;
     }
     .digital-ech img{
-        width: 80%;
+        max-width: 80%;
     }
 }
 
@@ -321,9 +353,13 @@ section nav a{
     width: 50%;
 }
 .sertifications img{
-    width: 80%;
+    float: none;
+    margin-left: 0px;
+    max-width: 80%;
+    max-height: 50%;
 }
 .about{
+    padding-left: 100px;
     width: 100%;
 }
 .about li{
