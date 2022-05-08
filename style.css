@@ -13,6 +13,10 @@
 }
 
 body{
+    width: 100vw;
+    /* https://css-tricks.com/the-trick-to-viewport-units-on-mobile/ */
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
     overflow: hidden;
     background-color: ghostwhite;
     display: flex;
@@ -78,13 +82,12 @@ body{
 }
 /* ======================== Main container ============================ */
 .container {
-    margin-left: 50px;
+    padding-left: 50px;
     font-size: 20px;
     display: flex;
+    flex-direction: row;
     overflow: auto;
     gap: 100px;
-    width: 100vw;
-    height: 100vh;
     scrollbar-width: none;
 }
 .container::-webkit-scrollbar {
@@ -102,7 +105,7 @@ body{
 }
 @media screen and (max-width: 770px) {
     .container{
-        margin-left: 0px;
+        padding-left: 0px;
         padding-bottom: 30px;
         font-size: 13px;
     }
@@ -129,7 +132,7 @@ body{
     top: 0;
     left: 0;
     width: 450px;
-    height: 100vh;
+    height: 100%;
     z-index: 1;
     border-right: 1px gray solid;
     box-shadow: 1px 0px 10px black;
@@ -255,8 +258,9 @@ section nav a{
 }
 /* ======================== Title h1 ============================ */
 .title{
-    width: 100%;
     padding: 0px;
+    height: 100%;
+    width: 100%;
 }
 .title__bg{
     height: 100%;
