@@ -11,9 +11,7 @@
     color: rgba(12, 12, 12, 0.933);
     /* font-family: 'Manrope', sans-serif; */
 }
-html {
-    scroll-behavior: smooth;
-  }
+
 body{
     overflow: hidden;
     background-color: ghostwhite;
@@ -98,6 +96,7 @@ body{
 }
 @media screen and (max-width: 770px) {
     .container{
+        margin-left: 0px;
         font-size: 14px;
     }
 }
@@ -154,6 +153,20 @@ body{
 .nav-menu__list-item:hover{
     font-weight: bold;
     transform: translate(10px,0);
+}
+@media screen and (max-width: 770px) {
+    .aside-menu_closed{
+        left: 0px;
+        transform: translate(-101%,0px);
+    }
+    .aside-menu__btn-open{
+        position: absolute;
+        background-color: ghostwhite;
+        transform: translate(0px,0px);
+        top: 0px;
+        left: 102%;
+        border: 1px solid #ccc;
+    }
 }
 /* ======================== Section ============================ */
 section{

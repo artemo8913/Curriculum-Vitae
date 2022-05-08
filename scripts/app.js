@@ -15,10 +15,10 @@ const btns = document.querySelectorAll('.btn');
 
 horizontalWheel(container);
 setWhiteMouseColor(titleBg);
-Array.from(headers2).forEach(item => setParallax(container, item, 160, 10));
-Array.from(paragraphsFirst).forEach(item => setParallax(container, item, 120, 5));
-Array.from(paragraphsOther).forEach(item => setParallax(container, item, 110, 6));
-Array.from(imgs).forEach(item => setParallax(container, item, 100, 5));
+// Array.from(headers2).forEach(item => setParallax(container, item, 160, 10));
+// Array.from(paragraphsFirst).forEach(item => setParallax(container, item, 120, 5));
+// Array.from(paragraphsOther).forEach(item => setParallax(container, item, 110, 6));
+// Array.from(imgs).forEach(item => setParallax(container, item, 100, 5));
 Array.from(links).forEach(link => setLinkHover(link));
 Array.from(btns).forEach(btn => magnetBtn(btn));
 

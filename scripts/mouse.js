@@ -1,5 +1,8 @@
 const mousePos = { x: 0, y: 0 };
 
+window.addEventListener('pointerdown', event=>{
+    event.preventDefault();
+});
 window.addEventListener('mousemove', event => {
     mouse.style.display = 'block';
     if (magnet.enable) {
@@ -13,7 +16,7 @@ window.addEventListener('mousemove', event => {
     mouse.style.transform = `translate(${mousePos.x + 'px'},${mousePos.y + 'px'})`;
 });
 
-function setWhiteMouseColor(element){
+function setWhiteMouseColor(element) {
     element.addEventListener("mouseenter", () => {
         mouse.classList.add('mouse_white');
     });
@@ -22,7 +25,7 @@ function setWhiteMouseColor(element){
     });
 }
 
-function setLinkHover(link){
+function setLinkHover(link) {
     link.addEventListener("mouseenter", () => {
         mouse.classList.add('mouse_link-hover');
     });
