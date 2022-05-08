@@ -24,7 +24,7 @@ body{
 }
 /*-------------------- Mouse & btn magnetic control --------------------*/
 .mouse{
-    transition: background-color 0.3s, width 0.2s, height 0.2s, transform 0.05s;
+    transition: background-color 0.4s, width 0.4s, height 0.4s, transform 0.05s;
     top: 0;
     left: 0;
     display: none;
@@ -49,7 +49,6 @@ body{
 
 }
 .mouse_btn-hover{
-    transition: background-color 0.3s, width 0.3s, height 0.3s, transform 0.1s;
     width: 50px;
     height: 50px;
     border-radius: 50px;
@@ -82,13 +81,17 @@ body{
 }
 /* ======================== Main container ============================ */
 .container {
-    padding-left: 50px;
+    margin-left: 50px;
     font-size: 20px;
     display: flex;
     flex-direction: row;
     overflow: auto;
     gap: 100px;
     scrollbar-width: none;
+}
+.js-canvas{
+    position: absolute;
+    bottom: 0px;
 }
 .container::-webkit-scrollbar {
     display: none;
@@ -105,7 +108,7 @@ body{
 }
 @media screen and (max-width: 770px) {
     .container{
-        padding-left: 0px;
+        margin-left: 0px;
         padding-bottom: 30px;
         font-size: 13px;
     }
@@ -266,8 +269,8 @@ section nav a{
     height: 100%;
     width: 100%;
     background: url(./source/bgBlack.png);
-    -webkit-mask-image: linear-gradient(to right, ghostwhite, transparent);
-    mask-image: linear-gradient(to right, ghostwhite, transparent);
+    -webkit-mask-image: linear-gradient(to right, ghostwhite 40%, transparent);
+    mask-image: linear-gradient(to right, ghostwhite 40%, transparent);
     background-size: cover;
 }
 .title__h1{
