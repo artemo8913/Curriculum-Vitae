@@ -25,7 +25,3 @@ function magnetBtn(btn, mouse) {
         mouse.classList.remove('mouse_btn-hover');
     });
 }
-
-function findOffset(){
-
-}
