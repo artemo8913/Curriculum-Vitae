@@ -7,9 +7,9 @@
     border: 0;
     box-sizing: border-box;
     cursor: none;
-    font-family: 'Playfair Display', serif;
     color: rgba(12, 12, 12, 0.933);
-    /* font-family: 'Manrope', sans-serif; */
+    /* font-family: 'Playfair Display', serif; */
+    font-family: 'Manrope', sans-serif;
 }
 
 body{
