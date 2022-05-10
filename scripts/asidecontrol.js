@@ -14,11 +14,11 @@ function setShowAside(aside, asideBtnOpen, asideArea) {
     });
 }
 function setAnchors(sections, anchors, aside, asideBtnClose, asideBtnOpen) {
-    Array.from(sections).forEach(/**@param {HTMLElement}section*/section => {
+    Array.from(sections).forEach(section => {
         Array.from(anchors).forEach(anchor => {
             if (anchor.getAttribute('linkTo') === section.className) {
                 anchor.addEventListener('click', () => {
-                    section.scrollIntoView({ block: "start", behavior: "smooth" });
+                    section.scrollIntoView({ inline: "start", behavior: "smooth" });
                     hideAside(aside, asideBtnClose, asideBtnOpen);
                 });
             }

@@ -11,6 +11,16 @@
 
 <body>
     <div class="mouse"></div>
+    <div class="carousel__btn carousel__btn_left btn">
+        <div class="btn__inner">
+            <img src="./source/arrLeft.svg" alt="вправо">
+        </div>
+    </div>
+    <div class="carousel__btn carousel__btn_right btn">
+        <div class="btn__inner">
+            <img src="./source/arrRight.svg" alt="вправо">
+        </div>
+    </div>
     <div class="scrollInfo">
         <div class="scrollInfo__hint hint">
             <div class="hint__text">Scroll or swipe</div>
@@ -75,9 +85,11 @@
                 контроля
                 за проведением текущего ремонта подразделениями.</p>
             <p>Данные по ремонту (дата, местоположение) оформляются в таблице excel по установленному шаблону, которые
-                загружаются в веб-приложение. По результатам обработки данных участки схемы (SVG рисунок) принимают различные
+                загружаются в веб-приложение. По результатам обработки данных участки схемы (SVG рисунок) принимают
+                различные
                 цвета в зависимости от даты проведения ремонта. Нажатием на участок контактной
-                сети появляется информационная панель с данными о ремонте. Обнаруженные в процессе обработки ошибки в оформлении данных
+                сети появляется информационная панель с данными о ремонте. Обнаруженные в процессе обработки ошибки в
+                оформлении данных
                 прописываются в новом файле excel, который можно скачать и в нем же провести корректировку.</p>
             <nav>Ссылки на сайт и исходные файлы проекта: <a href="https://artemo8913.github.io/ech3/">Github pages</a>
                 <a href="https://github.com/artemo8913/ech3">GitHub</a> <a
@@ -137,6 +149,7 @@
         </section>
     </div>
     <script src="./scripts/progressBar.js"></script>
+    <script src="./scripts/navigationControl.js"></script>
     <script src="./scripts/asidecontrol.js"></script>
     <!-- <script src="./scripts/canvas.js"></script> -->
     <script src="./scripts/mouse.js"></script>

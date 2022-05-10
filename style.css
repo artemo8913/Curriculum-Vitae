@@ -73,7 +73,23 @@ body{
     width: 100%;
     height: 100%;
 }
-
+.carousel__btn{
+    transition: opacity 0.5s;
+    z-index: 1;
+    opacity: 0.2;
+    position: absolute;
+    top: 50%;
+    transform: translate(0px,-50%);
+}
+.carousel__btn:hover{
+    opacity: 1;
+}
+.carousel__btn_left{
+    left: 50px;
+}
+.carousel__btn_right{
+    left: calc(100% - 100px);
+}
 .scrollInfo{
     position: absolute;
     z-index: 1;
@@ -286,7 +302,7 @@ section h2{
     border-bottom: 1px solid black;
 }
 section h3{
-    color: #ccc;
+    color: rgb(120, 120, 120);
     font-size: 0.8em;
     margin-bottom: 30px;
 }
@@ -397,6 +413,9 @@ section nav a{
 
 /* ======================== About & contacts ============================ */
 .about h2{
+    border-bottom: none;
+}
+.sertifications h2{
     border-bottom: none;
 }
 .sertifications img{

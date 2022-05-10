@@ -7,8 +7,6 @@ const magnet = {
 function magnetBtn(btn, mouse) {
     const btnInner = btn.children[0];
     btn.addEventListener("mouseenter", (event) => {
-        console.log(1);
-
         magnet.enable = true;
         mouse.classList.add('mouse_btn-hover');
     });
@@ -20,7 +18,6 @@ function magnetBtn(btn, mouse) {
         btnInner.style.transform = `translate(${magnet.btnInnerOffset.x + 'px'},${magnet.btnInnerOffset.y + 'px'})`;
     });
     btn.addEventListener("mouseleave", () => {
-        console.log(2);
         magnet.enable = false;
         magnet.btnInnerOffset.x = 0;
         magnet.btnInnerOffset.y = 0;
