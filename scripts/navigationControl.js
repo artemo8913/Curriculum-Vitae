@@ -18,7 +18,7 @@ function setCarouselNav(btnLeft, btnRight, sections) {
             const rightPos = section.getBoundingClientRect().right;
             const leftPos = section.getBoundingClientRect().left;
             const viewWidth = window.visualViewport.width;
-            if (0 <= rightPos && rightPos <= viewWidth || 0 <= leftPos && leftPos <= viewWidth) {
+            if (0 <= rightPos && rightPos <= viewWidth) {
                 section.nextElementSibling.scrollIntoView({ inline: "start", behavior: "smooth" });
                 break;
             }
