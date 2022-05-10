@@ -22,7 +22,7 @@ body{
     display: flex;
     justify-content: center;
 }
-/*-------------------- Mouse & btn magnetic control --------------------*/
+/*-------------------- Mouse, btn magnetic control, scrollBar --------------------*/
 .mouse{
     transition: background-color 0.4s, width 0.4s, height 0.4s, transform 0.05s;
     top: 0;
@@ -58,25 +58,89 @@ body{
 }
 .btn{
     display: flex;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
 }
 .btn__inner{
+    pointer-events: none;
     margin: auto;
-    width: 80%;
-    height: 80%;
-    transition: all 0.1s;
+    width: 50%;
+    height: 50%;
+    transition: all 0.2s;
 }
 .btn__inner img{
     width: 100%;
     height: 100%;
 }
+
+.scrollInfo{
+    position: absolute;
+    z-index: 1;
+    top: 90%;
+    left: calc(100% - 350px);
+    width: 300px;
+}
+.scrollInfo__hint{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transition: opacity 1s;
+    gap: 30px;
+}
+.scrollInfo__hint_hide{
+    opacity: 0;
+}
+.hint__text{
+    color: black;
+    text-shadow: 0px 0px 2px white;
+    align-items: center;
+}
+.hint__direction{
+    height: 30px;
+    animation: goToRight 3s ease-in-out infinite;
+}
+.hint__direction img{
+    height: 100%;
+    width: auto;
+}
+.scrollInfo__bg{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: #e4e5e5;
+}
+.scrollInfo__progress-bar {
+    position: absolute;
+    bottom: 0px;
+    height: 1px;
+    background-color: gray;
+}
+@keyframes goToRight{
+    20%{
+        transform: translate(100%,0px);
+        opacity: 0;
+    }
+    40%{
+        transform: translate(-100%,0px);
+        opacity: 0;
+    }
+    60%{
+        transform: translate(0px,0px);
+        opacity: 1;
+    }
+}
 @media screen and (max-width: 770px) {
     .btn{
-        width: 30px;
-        height: 30px;
-        border-radius: 30px;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+    }
+    .scrollInfo{
+        top: calc(100% - 80px);
+        left: 30%;
+        max-width: 60%;
     }
 }
 /* ======================== Main container ============================ */
@@ -109,7 +173,7 @@ body{
 @media screen and (max-width: 770px) {
     .container{
         margin-left: 0px;
-        padding-bottom: 30px;
+        padding-bottom: 40px;
         font-size: 13px;
     }
 }
@@ -149,7 +213,15 @@ body{
     position: absolute;
     top: 50%;
     left: 100%;
-    transform: translate(-100%,-50%);
+    transform: translate(-80%,-50%);
+}
+.aside-menu__area-open{
+    position: absolute;
+    height: 100%;
+    width: 50px;
+    top: 0px;
+    left: 100%;
+    transform: translate(-100%,0px); 
 }
 .aside-menu__btn-close{
     margin-left: auto;
@@ -179,7 +251,7 @@ body{
     }
     .aside-menu_closed{
         left: 0px;
-        top: calc(100% - 30px);
+        top: calc(100% - 40px);
     }
     .aside-menu__btn-open{
         top: 0px;
@@ -191,6 +263,13 @@ body{
         top: 100%;
         left: 50%;
         transform: translate(-50%,-100%);
+    }
+    .aside-menu__area-open{
+        position: absolute;
+        width: 100%;
+        height: 40px;
+        top: 0px;
+        left: 100%;
     }
 }
 /* ======================== Section ============================ */
@@ -204,6 +283,11 @@ section{
 }
 section h2{
     font-size: 1.6em;
+    border-bottom: 1px solid black;
+}
+section h3{
+    color: #ccc;
+    font-size: 0.8em;
     margin-bottom: 30px;
 }
 section p{
@@ -220,34 +304,6 @@ section nav{
 }
 section nav a{
     margin-right: 10px;
-}
-@media screen and (max-width: 770px) {
-    section{
-        padding: 10px 10px;
-    }
-    section nav{
-        bottom: 10px;
-    }
-    section h2{
-        margin-bottom: 10px;
-    }
-    section p{
-        margin-bottom: 10px;
-    }
-}
-@media screen and (max-height: 700px) {
-    section{
-        padding: 10px 10px;
-    }
-    section nav{
-        bottom: 10px;
-    }
-    section h2{
-        margin-bottom: 10px;
-    }
-    section p{
-        margin-bottom: 10px;
-    }
 }
 @media screen and (max-width: 550px) {
     section img{
@@ -297,16 +353,10 @@ section nav a{
     max-width: 70%;
     max-height: 40%;
 }
-.test-puteks{
-    width: 50%;
-}
 .test-puteks img{
     max-width: 40%;
     max-height: 60%;
     
-}
-.xo{
-    width: 50%; 
 }
 .xo img{
     float: none;
@@ -318,15 +368,6 @@ section nav a{
 .digital-ech img{
     max-width: 50%;
     max-height: 50%;
-}
-@media screen and (max-width: 1045px) {
-    .test-puteks{
-        width: 65%;
-    }
-    .xo{
-        width: 65%; 
-    }
-
 }
 @media screen and (max-width: 770px) {
     .asu-tp img{
@@ -355,8 +396,8 @@ section nav a{
 }
 
 /* ======================== About & contacts ============================ */
-.sertifications{
-    width: 50%;
+.about h2{
+    border-bottom: none;
 }
 .sertifications img{
     float: none;
@@ -364,18 +405,10 @@ section nav a{
     max-width: 80%;
     max-height: 50%;
 }
-.about{
-    padding-left: 100px;
-    width: 100%;
-}
+
 .about li{
     list-style-position: inside;
 }
 .about ul{
     margin-bottom: 20px;
-}
-@media screen and (max-width: 770px) {
-    .sertifications{
-        width: 80%;
-    }
 }

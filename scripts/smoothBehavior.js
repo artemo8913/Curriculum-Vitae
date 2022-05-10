@@ -1,4 +1,5 @@
 // https://stackoverflow.com/questions/70226035/smooth-horizontal-wheel-only-scrolling
+const factor = 0.7;
 function horizontalWheel(container) {
     /** Max `scrollLeft` value */
     let scrollWidth;
@@ -33,7 +34,7 @@ function horizontalWheel(container) {
       e.preventDefault();
   
       scrollWidth = container.scrollWidth - container.clientWidth;
-      targetLeft = Math.min(scrollWidth, Math.max(0, container.scrollLeft + e.deltaY));
+      targetLeft = Math.min(scrollWidth, Math.max(0, container.scrollLeft + factor * e.deltaY));
   
       requestAnimationFrame(scrollLeft);
     });

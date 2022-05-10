@@ -6,8 +6,8 @@ window.addEventListener('pointerdown', event=>{
 window.addEventListener('mousemove', event => {
     mouse.style.display = 'block';
     if (magnet.enable) {
-        mousePos.x = magnet.circlePos.x + magnet.btnInnerOffset.x / 2;
-        mousePos.y = magnet.circlePos.y + magnet.btnInnerOffset.y / 2;
+        mousePos.x = magnet.circlePos.x + magnet.btnInnerOffset.x;
+        mousePos.y = magnet.circlePos.y + magnet.btnInnerOffset.y;
     }
     else {
         mousePos.x = event.pageX;

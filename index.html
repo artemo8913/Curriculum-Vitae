@@ -11,7 +11,16 @@
 
 <body>
     <div class="mouse"></div>
+    <div class="scrollInfo">
+        <div class="scrollInfo__hint hint">
+            <div class="hint__text">Scroll or swipe</div>
+            <div class="hint__direction"><img src="./source/arrow_right.svg" alt="вправо"></div>
+        </div>
+        <div class="scrollInfo__bg"></div>
+        <div class="scrollInfo__progress-bar"></div>
+    </div>
     <aside class="aside-menu aside-menu_closed">
+        <div class="aside-menu__area-open"></div>
         <div class="aside-menu__btn-open btn">
             <div class="btn__inner">
                 <img src="./source/moreIcon.svg" alt="">
@@ -25,12 +34,14 @@
             </div>
             <div class="nav-menu__title">МЕНЮ</div>
             <ul class="nav-menu__list">
-                <li class="nav-menu__list-item"><a linkTo="asu-tp">АСУ ТП КрИЖТ</a></li>
-                <li class="nav-menu__list-item"><a linkTo="test-puteks">Тест по проверке знаний</a></li>
-                <li class="nav-menu__list-item"><a linkTo="xo">X-O</a></li>
-                <li class="nav-menu__list-item"><a linkTo="digital-ech">Цифровая дистанция электроснабжения</a></li>
+                <li class="nav-menu__list-item"><a linkTo="about">О себе</a></li>
+                <li class="nav-menu__list-item"><a linkTo="digital-ech">Цифровая дистанция электроснабжения. Текущий
+                        ремонт контактной сети</a></li>
+                <li class="nav-menu__list-item"><a linkTo="xo">Крестики-нолики</a></li>
+                <li class="nav-menu__list-item"><a linkTo="asu-tp">Интерактивная схема тяговой подстанции</a></li>
+                <li class="nav-menu__list-item"><a linkTo="test-puteks">Тест по проверке знаний монтеров контактной
+                        сети</a></li>
                 <li class="nav-menu__list-item"><a linkTo="sertifications">Сертификаты</a></li>
-                <li class="nav-menu__list-item"><a linkTo="about">Контакты</a></li>
             </ul>
         </nav>
     </aside>
@@ -40,13 +51,56 @@
             <div class="title__bg"></div>
             <h1 class="title__h1">SPIRYAEV'S <span class="title__h1_subtext">WORK PLACE</span></h1>
         </section>
+        <section class="about">
+            <h2>Обо мне</h2>
+            <p>Информация</p>
+            <ul>Мои характеристики:
+                <li>Клёвый</li>
+                <li>Крутой</li>
+                <li>Парень</li>
+            </ul>
+            <h2>Контакты</h2>
+            <ul>
+                <li><a href="mailto:kaline-son@ya.ru">Электронная почта</a></li>
+                <li><a href="https://krasnoyarsk.hh.ru/resume/46a41a52ff0915ac450039ed1f554534716842">Резюме hh.ru</a>
+                </li>
+            </ul>
+        </section>
+        <section class="digital-ech">
+            <h2>Цифровая Цифровая Красноярская дистанция электроснабжения. Текуший ремонт контактной сети</h2>
+            <h3>HTML, CSS, JavaScript, SVG</h3>
+            <img src="./source/digital ech.gif" alt="">
+            <p>Веб-приложение наглядного представления данных выполнения текущего ремонта контактной сети ОАО "РЖД"
+                разработано в целях снижения риска возникновения отказов технических средств, установления удобного
+                контроля
+                за проведением текущего ремонта подразделениями.</p>
+            <p>Данные по ремонту (дата, местоположение) оформляются в таблице excel по установленному шаблону, которые
+                загружаются в веб-приложение. По результатам обработки данных участки схемы (SVG рисунок) принимают различные
+                цвета в зависимости от даты проведения ремонта. Нажатием на участок контактной
+                сети появляется информационная панель с данными о ремонте. Обнаруженные в процессе обработки ошибки в оформлении данных
+                прописываются в новом файле excel, который можно скачать и в нем же провести корректировку.</p>
+            <nav>Ссылки на сайт и исходные файлы проекта: <a href="https://artemo8913.github.io/ech3/">Github pages</a>
+                <a href="https://github.com/artemo8913/ech3">GitHub</a> <a
+                    href="https://disk.yandex.ru/i/cfqHGlupPZU4KA">Скачать excel файл с данными</a>
+            </nav>
+        </section>
+        <section class="xo">
+            <h2>Крестики-нолики</h2>
+            <h3>HTML, CSS, JavaScript</h3>
+            <p>Самая обыкновенная игра, при разработке которой впервые познакомился с JavaScript, структрой DOM-дерева.
+            </p>
+            <img src="./source/xo.gif" alt="Крестики-нолики" srcset="">
+            <nav>Ссылки на сайт и исходные файлы проекта: <a href="https://artemo8913.github.io/-tic-tac-toe/">Github
+                    pages</a> <a href="https://github.com/artemo8913/-tic-tac-toe">GitHub</a></nav>
+        </section>
         <section class="asu-tp">
-            <h2>Интерактивная однолинейная схема учебной тяговой подстанции КрИЖТ</h2>
+            <h2>Интерактивная однолинейная схема учебной тяговой подстанции</h2>
+            <h3>Unity3D, C#, Visio</h3>
             <img src="./source/Интерактивная однолинейная схема.gif" alt="Интерактивная однолинейная схема" srcset="">
-            <p>
-                В качестве дипломного проекта с помощью Unity3D мною была разработана интерактивная однолинейная схема,
-                в которой можно производить операции с коммутационной аппаратурой, при этом динамически окрашиваются
-                элементы схемы, а также изменяются значения моделируемых параметров электрической сети (напряжений,
+            <p>В 2018 году в качестве дипломного проекта на Unity3D разработана интерактивная однолинейная схема тяговой
+                подстанции. На схеме можно производить операции с коммутационной аппаратурой, при этом динамически
+                окрашиваются
+                элементы схемы, изменяются значения моделируемых параметров электрической сети (напряжений,
                 токов).</p>
             <p>В программе предусмотрено применение плакатов и знаков электробезопасности. При вывешенном плакате на КА
                 обеспечивается запрет операций с этой аппаратурой. При переключениях осуществляется проверка возможности
@@ -58,24 +112,14 @@
         </section>
         <section class="test-puteks">
             <h2>Тест по проверке знаний электромонтера контактной сети</h2>
+            <h3>Unity3D, C#, Visio</h3>
             <img src="./source/Тест.gif" alt="Тест" srcset="">
-            <p>Простой тест для проверки знаний электромонтера контактной сети разработн на Unity3D для android
+            <p>Простой тест для проверки знаний электромонтеров контактной сети на Unity3D для PC и android
                 смартфонов.</p>
             <p>Данное тестирование использовалось при проведении конкурсов "Лучший электромонтер контактной
-                сети". В результате тестирования предоставляется статистика верности ответов по категориям (охрана
-                труда, устройства контактной сети и т.д.)
-            </p>
-
+                сети" в ОАО "РЖД".</p>
             <nav>Ссылки на .apk проекта: <a href="https://yadi.sk/d/u_SAnd_BJhBHrA">Я.диск</a>
             </nav>
-        </section>
-        <section class="xo">
-            <h2>Крестики-нолики</h2>
-            <p>Самая обыкновенная игра, при разработке которой впервые познакомился с JavaScript, структрой DOM-дерева.
-            </p>
-            <img src="./source/xo.gif" alt="Крестики-нолики" srcset="">
-            <nav>Ссылки на сайт и исходные файлы проекта: <a href="https://artemo8913.github.io/-tic-tac-toe/">Github
-                    pages</a> <a href="https://github.com/artemo8913/-tic-tac-toe">GitHub</a></nav>
         </section>
         <!-- <section class="goCorona">
             <h2>Верстка сайта по макету из Figma GoCorona</h2>
@@ -84,26 +128,6 @@
             <img src="" alt="goCorona">
             <nav>Ссылки на сайт и исходные файлы проекта: <a href="">Github pages</a> <a href="">GitHub</a></nav>
         </section> -->
-        <section class="digital-ech">
-            <h2>Цифровая Цифровая Красноярская дистанция электроснабжения. Текуший ремонт контактной сети</h2>
-            <img src="./source/digital ech.gif" alt="">
-            <p>В целях обеспечения безопасности движения поездов, поддержания работоспособного состояния устройств
-                электроснабжения необходимо постоянно проводить мероприятия по получению максимально достоверной
-                информации о фактическом техническом состоянии контактной сети, анализировать полученную информацию и
-                принимать управленческие решения. Для более качественного, удобного, наглядного и оперативного контроля
-                за проведением ТР районов контактной сети в ЭЧ-3 разработано веб-приложение по автоматизированному
-                графическому отображению на схеме данных о проведенном ТР.</p>
-            <p>Данные по ТР оформляются в таблице excel по установленному шаблону, которые загружаются в веб-приложение
-                при нажатии на соответствующую кнопку. По результатам обработки данных участки схемы принимают различные
-                цвета в зависимости от даты проведения ТР и периодичности проведения ТР. Нажатием на участок контактной
-                сети появляется информационная панель с данными о ТР. Обнаруженные в процессе обработки ошибки
-                прописываются в новом файле excel, который можно скачать и в нем провести корректировку.</p>
-
-            <nav>Ссылки на сайт и исходные файлы проекта: <a href="https://artemo8913.github.io/ech3/">Github pages</a>
-                <a href="https://github.com/artemo8913/ech3">GitHub</a> <a
-                    href="https://disk.yandex.ru/i/cfqHGlupPZU4KA">Скачать excel файл с данными</a>
-            </nav>
-        </section>
         <section class="sertifications">
             <h2>Сертификаты</h2>
             <img src="source/freeCodeCamp.png" alt="Сертификат Free Code Camp">
@@ -111,27 +135,12 @@
                     href="https://freecodecamp.org/certification/fcc281f422c-d270-44be-a74a-68d0cab9e559/javascript-algorithms-and-data-structures">Подтверждение
                     наличия сертификата</a></nav>
         </section>
-        <section class="about">
-            <h2>Обо мне</h2>
-            <p>Информация</p>
-            <ul>Мои характеристики:
-                <li>Клёвый</li>
-                <li>Крутой</li>
-                <li>Парень</li>
-            </ul>
-            <h2>Контакты</h2>
-            <ul>Мои характеристики:
-                <li><a href="mailto:kaline-son@ya.ru">Электронная почта</a></li>
-                <li><a href="https://krasnoyarsk.hh.ru/resume/46a41a52ff0915ac450039ed1f554534716842">Резюме hh.ru</a>
-                </li>
-            </ul>
-        </section>
     </div>
+    <script src="./scripts/progressBar.js"></script>
     <script src="./scripts/asidecontrol.js"></script>
     <!-- <script src="./scripts/canvas.js"></script> -->
     <script src="./scripts/mouse.js"></script>
     <script src="./scripts/btnMagnit.js"></script>
-    <script src="./scripts/paralax.js"></script>
     <script src="./scripts/smoothBehavior.js"></script>
     <script src="./scripts/app.js"></script>
 </body>

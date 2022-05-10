@@ -3,7 +3,11 @@ function setHideAside(aside, asideBtnClose, asideBtnOpen) {
         hideAside(aside, asideBtnClose, asideBtnOpen);
     });
 }
-function setShowAside(aside, asideBtnOpen) {
+function setShowAside(aside, asideBtnOpen, asideArea) {
+    asideArea.addEventListener('click', () => {
+        aside.classList.remove('aside-menu_closed');
+        asideBtnOpen.style.display = "none";
+    });
     asideBtnOpen.addEventListener('click', () => {
         aside.classList.remove('aside-menu_closed');
         asideBtnOpen.style.display = "none";
