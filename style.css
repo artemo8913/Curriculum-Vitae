@@ -347,8 +347,8 @@ section nav a{
     height: 100%;
     width: 100%;
     background: url(./source/bgBlack.png);
-    -webkit-mask-image: linear-gradient(to right, ghostwhite, transparent 80%);
-    mask-image: linear-gradient(to right, ghostwhite, transparent 80%);
+    -webkit-mask-image: linear-gradient(to right, ghostwhite, transparent 70%);
+    mask-image: linear-gradient(to right, ghostwhite, transparent 70%);
     opacity: 0.9;
     background-size: cover;
 }
