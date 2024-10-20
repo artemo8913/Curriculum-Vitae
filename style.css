@@ -46,7 +46,6 @@ body{
     height: 20px;
     border-radius: 20px;
     border: 2px solid rgba(0, 0, 0, 0.848);
-
 }
 .mouse_btn-hover{
     width: 50px;
@@ -298,7 +297,7 @@ section{
     flex-shrink: 0;
     width: 95%;
     height: 100%;
-    padding: 30px 15px;
+    padding: 30px 45px;
 }
 section h2{
     font-size: 1.6em;
@@ -379,18 +378,26 @@ section nav a{
     margin: auto;
 }
 
+canvas {
+    display: block;
+    margin: auto;
+    height: 60% !important;
+}
+
 /* ======================== About & contacts ============================ */
 .about h2{
     border-bottom: none;
+}
+.sertifications_container{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 .sertifications h2{
     border-bottom: none;
 }
 .sertifications img{
-    float: none;
-    margin-left: 0px;
-    max-width: 80%;
-    max-height: 50%;
+    flex-shrink: 1;
 }
 
 .about li{
