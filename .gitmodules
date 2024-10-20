@@ -1,0 +1,3 @@
+[submodule "generative-geometry"]
+	path = generative-geometry
+	url = https://github.com/artemo8913/generative-geometry
