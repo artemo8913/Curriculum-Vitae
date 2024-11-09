@@ -22,6 +22,11 @@ body{
     display: flex;
     justify-content: center;
 }
+
+p {
+    margin-bottom: 12px;
+}
+
 /*-------------------- Mouse, btn magnetic control, scrollBar --------------------*/
 .mouse{
     transition: background-color 0.4s, width 0.4s, height 0.4s, transform 0.05s;
@@ -46,7 +51,6 @@ body{
     height: 20px;
     border-radius: 20px;
     border: 2px solid rgba(0, 0, 0, 0.848);
-
 }
 .mouse_btn-hover{
     width: 50px;
@@ -247,6 +251,7 @@ body{
 }
 .nav-menu{
     padding: 50px;
+    height: 100%;
 }
 .nav-menu__title{
     color: #ccc;
@@ -254,6 +259,9 @@ body{
 }
 .nav-menu__list{
     list-style: none;
+    height: 80%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .nav-menu__list-item{
     transition: all 0.2s;
@@ -298,7 +306,7 @@ section{
     flex-shrink: 0;
     width: 95%;
     height: 100%;
-    padding: 30px 15px;
+    padding: 30px 45px;
 }
 section h2{
     font-size: 1.6em;
@@ -379,18 +387,26 @@ section nav a{
     margin: auto;
 }
 
+canvas {
+    display: block;
+    margin: auto;
+    height: 60% !important;
+}
+
 /* ======================== About & contacts ============================ */
 .about h2{
     border-bottom: none;
+}
+.sertifications_container{
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 .sertifications h2{
     border-bottom: none;
 }
 .sertifications img{
-    float: none;
-    margin-left: 0px;
-    max-width: 80%;
-    max-height: 50%;
+    flex-shrink: 1;
 }
 
 .about li{
