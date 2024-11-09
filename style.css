@@ -22,6 +22,11 @@ body{
     display: flex;
     justify-content: center;
 }
+
+p {
+    margin-bottom: 12px;
+}
+
 /*-------------------- Mouse, btn magnetic control, scrollBar --------------------*/
 .mouse{
     transition: background-color 0.4s, width 0.4s, height 0.4s, transform 0.05s;
@@ -246,6 +251,7 @@ body{
 }
 .nav-menu{
     padding: 50px;
+    height: 100%;
 }
 .nav-menu__title{
     color: #ccc;
@@ -253,6 +259,9 @@ body{
 }
 .nav-menu__list{
     list-style: none;
+    height: 80%;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 .nav-menu__list-item{
     transition: all 0.2s;
